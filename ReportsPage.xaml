@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="PlagiarismChecker.ReportsPage"
+             BackgroundColor="#32415B"
+             Padding="0,40,0,20">
+    
+    <StackLayout Spacing="0">
+        <StackLayout HorizontalOptions="CenterAndExpand" Padding="0,20">
+            <Label Text="Abc" TextColor="{StaticResource textHeadColor}" FontSize="Medium" 
+                   FontAttributes="Bold" />
+        </StackLayout>
+        
+        <StackLayout Spacing="0" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                         VerticalOptions="CenterAndExpand" Padding="0,15" BackgroundColor="#1ED6BA"
+                         Spacing="0">
+                <Label Text="Date" FontSize="Micro" FontAttributes="Bold"
+                       WidthRequest="80" VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       TextColor="{StaticResource textColor}" Margin="5,0,0,0"  />
+                <Label Text="Documents" FontSize="Micro" FontAttributes="Bold"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       HorizontalOptions="FillAndExpand"
+                       TextColor="{StaticResource textColor}" Margin="5,0,0,0" />
+                <Label Text="Orignality" FontSize="Micro" FontAttributes="Bold"
+                       WidthRequest="80" VerticalTextAlignment="Center"
+                       HorizontalOptions="EndAndExpand"
+                       HorizontalTextAlignment="Start"
+                       TextColor="{StaticResource textColor}"  />
+            </StackLayout>
+        </StackLayout>
+        
+        <StackLayout Spacing="0">
+            <ListView SeparatorVisibility="None" x:Name="listView" BackgroundColor="#32415B">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            
+                            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="FillAndExpand">
+                                <Frame BackgroundColor="White"
+                                       CornerRadius="0"
+                                       HasShadow="false"
+                                       BorderColor="#32415B"
+                                       Padding="0">
+                                    <Frame.Content>
+                                        <StackLayout WidthRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
+                                                     Spacing="0">
+                                            <Label Text="{Binding Date , StringFormat='{0:yyyy/MM/dd}'}" FontSize="Micro"
+                                                   TextColor="Black" HorizontalTextAlignment="Start"
+                                                   Margin="5,0,0,0"
+                                                   HorizontalOptions="FillAndExpand"/>
+                                            <Label Text="{Binding Date , StringFormat='{0:hh:mm tt}'}" FontSize="Micro"
+                                                   TextColor="Black" HorizontalTextAlignment="Start"
+                                                   Margin="5,0,0,0"
+                                                   HorizontalOptions="FillAndExpand"/>
+                                        </StackLayout>
+                                    </Frame.Content>
+                                </Frame>
+                                
+                                <Frame HorizontalOptions="FillAndExpand" BackgroundColor="White"
+                                        CornerRadius="0"
+                                        BorderColor="#32415B" 
+                                        HasShadow="false"
+                                        Padding="0">
+                                    <Frame.Content>
+                                        <StackLayout VerticalOptions="Center" Spacing="0">
+                                            <Label Text="{Binding Documents ,StringFormat='{0}...'}"
+                                                   FontSize="Micro"
+                                                   TextColor="Black"
+                                                   Margin="5,0,0,0"
+                                                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center">
+                                                   
+                                                </Label>
+                                        </StackLayout>
+                                    </Frame.Content>
+                                </Frame>
+                                
+                                <Frame WidthRequest="100" HorizontalOptions="FillAndExpand" 
+                                       BackgroundColor="White"
+                                       CornerRadius="0"
+                                       HasShadow="false"
+                                       Padding="0"
+                                       BorderColor="#32415B">
+                                    <Frame.Content>
+                                        <StackLayout VerticalOptions="Center" Spacing="0">
+                                            <Label Text="{Binding Orignality}" FontSize="Micro"
+                                                   TextColor="Black"
+                                                   VerticalTextAlignment="Center"
+                                                   HorizontalTextAlignment="Center"
+                                                   Margin="5,0,0,0"/>
+                                            
+                                        </StackLayout>
+                                    </Frame.Content>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </StackLayout>
+    
+</ContentPage>

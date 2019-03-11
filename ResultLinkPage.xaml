@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="PlagiarismChecker.ResultLinkPage"
+             BackgroundColor="#32415B"
+             Padding="0,40,0,20">
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+        
+        
+        <StackLayout Spacing="0" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                         VerticalOptions="CenterAndExpand" Padding="0,15" BackgroundColor="#1ED6BA"
+                         Spacing="0">
+                <Label Text="Sources" FontSize="Micro" FontAttributes="Bold"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       HorizontalOptions="FillAndExpand"
+                       TextColor="{StaticResource textColor}" Margin="5,0,0,0" />
+                <Label Text="Similarity" FontSize="Micro" FontAttributes="Bold"
+                       WidthRequest="80" VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       TextColor="{StaticResource textColor}" Margin="5,0,0,0"  />
+                
+                
+            </StackLayout>
+        </StackLayout>
+        
+        <StackLayout Spacing="0">
+            <ListView SeparatorVisibility="None" x:Name="listView" BackgroundColor="#32415B">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            
+                            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="FillAndExpand">
+                                
+                                
+                                <Frame HorizontalOptions="FillAndExpand" BackgroundColor="White"
+                                        CornerRadius="0"
+                                        BorderColor="#32415B" 
+                                        HasShadow="false"
+                                        Padding="0">
+                                    <Frame.Content>
+                                        <StackLayout VerticalOptions="Center" Spacing="0">
+                                            <Label Text="{Binding Link}"
+                                                   FontSize="Micro"
+                                                   TextColor="Black"
+                                                   Margin="5,0,0,0"
+                                                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center">
+                                                   
+                                                </Label>
+                                        </StackLayout>
+                                    </Frame.Content>
+                                </Frame>
+                                <Frame BackgroundColor="White"
+                                       CornerRadius="0"
+                                       HasShadow="false"
+                                       BorderColor="#32415B"
+                                       Padding="0">
+                                    <Frame.Content>
+                                        <StackLayout WidthRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
+                                                     Spacing="0">
+                                            
+                                            <Label Text="{Binding ParsentAge}" FontSize="Micro"
+                                                   TextColor="Black" HorizontalTextAlignment="Center"
+                                                   Margin="5,0,0,0"
+                                                   HorizontalOptions="FillAndExpand"/>
+                                        </StackLayout>
+                                    </Frame.Content>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

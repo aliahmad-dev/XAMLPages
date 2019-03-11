@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="PlagiarismChecker.PlagiarismPage"
+             BackgroundColor="#32415B"
+             Padding="5,40,5,20">
+    
+    <StackLayout Spacing="0">
+        <StackLayout Spacing="0" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical" Spacing="0">
+                
+                        <Button Text="Select File"
+                                TextColor="White"
+                                BackgroundColor="#1ED6BA"
+                                FontSize="Micro"
+                                BorderRadius="20"
+                                FontAttributes="Bold"
+                                Padding="10,5"
+                                HorizontalOptions="FillAndExpand"/>
+                
+                <Label Text="Only .docx/.pdf/.txt file extensions can be selected"
+                       TextColor="Silver"
+                       FontSize="Micro"
+                       Margin="0,5,0,0"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>  
+            </StackLayout>
+            <!--<BoxView Color="Silver"
+                     HorizontalOptions="FillAndExpand"
+                     HeightRequest="1"
+                     Margin="0,1,0,0" />!-->
+        </StackLayout>
+        
+        <StackLayout Spacing="0" Margin="0,10,0,0" HorizontalOptions="FillAndExpand">
+            <Label Text="OR"
+                   TextColor="Silver"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+        
+        <StackLayout Spacing="0" Margin="0,10" HorizontalOptions="FillAndExpand">
+            <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="300">
+                <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                  
+                            <StackLayout Spacing="0"
+                                         BackgroundColor="White"
+                             RelativeLayout.WidthConstraint="{ConstraintExpression 
+                        Type=RelativeToParent,Factor=1,Property=Width}"
+                                        
+                             RelativeLayout.HeightConstraint="{ConstraintExpression 
+                        Type=RelativeToParent,Factor=1,Property=Height}"
+                             RelativeLayout.XConstraint="{ConstraintExpression 
+                        Type=RelativeToView,
+                        ElementName=rightsection,
+                        Constant=-50}"
+                                         Margin="50,0,0,0">
+                
+                        
+                            <Editor Placeholder="Type your text here..."
+                                    FontSize="Micro"
+                                    Margin="40,0,0,0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"/>
+                        
+                </StackLayout>
+                  
+                    
+                    <Frame Margin="0"
+                       CornerRadius="40"
+                       BackgroundColor="#1ED6BA"
+                       Padding="0"
+                           HeightRequest="300"
+                       x:Name="rightsection">
+                    <Frame.Content>
+                        <StackLayout Spacing="0" Padding="5,0"  
+                             WidthRequest="80"
+                             VerticalOptions="FillAndExpand">
+                            <Label Text="&#xf044;"
+                                   TextColor="White"
+                                   FontSize="Large"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   VerticalTextAlignment="Center"
+                                   VerticalOptions="FillAndExpand">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String" 
+                                            Android="Fonts/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                            iOS="Font Awesome 5 Free" />
+                                </Label.FontFamily>
+                            </Label>
+                            <BoxView Color="White"
+                                     HeightRequest="1"
+                                     HorizontalOptions="FillAndExpand"/>
+                            <Label Margin="0,20" HorizontalOptions="Center" VerticalOptions="End">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="LIMIT&#x0a;" 
+                                              FontSize="Micro"
+                                              TextColor="White"
+                                              />
+                                        <Span Text="1000"
+                                              TextColor="White"
+                                              FontSize="Micro"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            
+                        </StackLayout>
+                    </Frame.Content>
+                </Frame>
+                    
+                </RelativeLayout>
+                
+            </StackLayout>
+            <Label HorizontalOptions="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Words:"
+                              FontSize="8"
+                              FontAttributes="Bold"
+                              TextColor="#1ED6BA"/>
+                        <Span Text="0"
+                              TextColor="Silver"
+                              FontSize="8"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        
+        
+        <StackLayout Spacing="0" HorizontalOptions="FillAndExpand" Margin="0">
+            <Button Text="Check Plagiarism"
+                    TextColor="White"
+                    BorderRadius="20"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#1ED6BA"/>
+        </StackLayout>
+        
+    </StackLayout>
+    
+    
+    
+</ContentPage>

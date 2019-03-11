@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="#32415B" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PlagiarismChecker.VerifyUser">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="20,40,20,0" Android="20,10,20,0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <RelativeLayout>
+                    <Frame OutlineColor="#1ED6BA" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}">
+                        <StackLayout Padding="0,50,0,0">
+                            <Label Text="Enter 4-digit code that sent on your email" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="#1ED6BA" />
+                            <StackLayout Margin="0,15,0,0" Orientation="Horizontal">
+                                <Label Text="Code: " TextColor="#1ED6BA" VerticalOptions="CenterAndExpand" />
+                                <Entry Placeholder="0" MaxLength="1" HorizontalTextAlignment="Center" FontSize="Large" />
+                                <Entry Placeholder="0" MaxLength="1" HorizontalTextAlignment="Center" FontSize="Large" />
+                                <Entry Placeholder="0" MaxLength="1" HorizontalTextAlignment="Center" FontSize="Large" />
+                                <Entry Placeholder="0" MaxLength="1" HorizontalTextAlignment="Center" FontSize="Large" />
+                            </StackLayout>
+                            <BoxView HeightRequest="1" Color="#1ED6BA" Margin="0,20,0,0" />
+                            <Label
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    TextColor="#1ED6BA"
+                                Margin="0,0,0,0"
+                    VerticalOptions="Start">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Not recieved yet? " />
+                                        <Span FontAttributes="Bold" Text="resend now" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        CornerRadius="60"
+                        HeightRequest="80"
+                        OutlineColor="#1ED6BA"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=-60}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Height,
+                                                                          Factor=0,
+                                                                          Constant=-70}"
+                        WidthRequest="80">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="70"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="&#xf3ed;"
+                            TextColor="#1ED6BA"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.FontFamily>
+                                <OnPlatform
+                                    x:TypeArguments="x:String"
+                                    Android="FontAwesome/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid"
+                                    iOS="Font Awesome 5 Free" />
+                            </Label.FontFamily>
+                        </Label>
+                    </Frame>
+                </RelativeLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

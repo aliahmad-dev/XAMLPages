@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="PlagiarismChecker.UserAccount"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Accounts"
+    BackgroundColor="#32415B">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame Padding="0,0,0,0" CornerRadius="0">
+                <StackLayout Spacing="0">
+                    <StackLayout Padding="0,0,0,0" Spacing="0">
+                        <Frame Padding="0,70,0,30" BackgroundColor="#1ED6BA" CornerRadius="0">
+                            <StackLayout>
+                                <Label
+                                    Margin="0,10,0,10"
+                                    FontSize="40"
+                                    HorizontalOptions="Center"
+                                    Text="Ali Ahmad"
+                                    TextColor="White">
+                                    <Label.FontFamily>
+                                        <OnPlatform
+                                            x:TypeArguments="x:String"
+                                            Android="FontAwesome/Anagram.ttf#Anagram"
+                                            iOS="Anagram" />
+                                    </Label.FontFamily>
+                                </Label>
+                                <Label
+                                    Margin="0,0,0,10"
+                                    FontSize="Medium"
+                                    HorizontalOptions="Center"
+                                    Text="04234njbnbbhghhhg0099nbbbjj70"
+                                    TextColor="White" />
+                            </StackLayout>
+                        </Frame>
+                        <Frame Padding="0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <StackLayout>
+                                    <StackLayout Padding="10">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Medium"
+                                            Text="EMAIL"
+                                            TextColor="#169d88" />
+                                        <Label
+                                            FontSize="Small"
+                                            Text="aliahmad71452@gmail.com"
+                                            TextColor="Black" />
+                                    </StackLayout>
+                                    <BoxView
+                                        Margin="10,0,0,0"
+                                        HeightRequest="1"
+                                        Color="#169d88" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <StackLayout Padding="10">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Medium"
+                                            Text="API KEY"
+                                            TextColor="#169d88" />
+                                        <Label
+                                            FontSize="Small"
+                                            Text="04234njbnbbhghhhg0099nbbbjj70"
+                                            TextColor="Black" />
+                                    </StackLayout>
+                                    <BoxView
+                                        Margin="10,0,0,0"
+                                        HeightRequest="1"
+                                        Color="#169d88" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <StackLayout Padding="10">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Medium"
+                                            Text="QURIES USED"
+                                            TextColor="#169d88" />
+                                        <Label
+                                            FontSize="Small"
+                                            Text="625"
+                                            TextColor="Black" />
+                                    </StackLayout>
+                                    <BoxView
+                                        Margin="10,0,0,0"
+                                        HeightRequest="1"
+                                        Color="#169d88" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <StackLayout Padding="10" Orientation="Horizontal">
+                                        <StackLayout HorizontalOptions="StartAndExpand">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                FontSize="Medium"
+                                                Text="QURIES LIMIT"
+                                                TextColor="#169d88" />
+                                            <Label
+                                                FontSize="Small"
+                                                Text="50000"
+                                                TextColor="Black" />
+                                        </StackLayout>
+                                        <Button
+                                            Padding="10,5,10,5"
+                                            BackgroundColor="#1ED6BA"
+                                            Text="Add More"
+                                            TextColor="White" />
+                                    </StackLayout>
+                                    <BoxView
+                                        Margin="10,0,0,0"
+                                        HeightRequest="1"
+                                        Color="#169d88" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <StackLayout Padding="10">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Medium"
+                                            Text="MEMBERSHIP"
+                                            TextColor="#169d88" />
+                                        <Label
+                                            FontSize="Small"
+                                            Text="Premium (Expire on: 08 Feb, 2022)"
+                                            TextColor="Black" />
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="PlagiarismChecker.LogIn"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#32415B">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="20,40,20,0" Android="20,10,20,0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <RelativeLayout>
+                    <Frame OutlineColor="#1ED6BA" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}">
+                        <StackLayout Padding="0,60,0,0">
+
+                           
+                            <StackLayout
+                                Margin="0,0,0,5"
+                                HeightRequest="40"
+                                Orientation="Horizontal">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="Large"
+                                    Text="&#xf1fa;"
+                                    TextColor="#1ED6BA"
+                                    VerticalOptions="Center">
+                                    <Label.FontFamily>
+                                        <OnPlatform
+                                            x:TypeArguments="x:String"
+                                            Android="FontAwesome/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid"
+                                            iOS="Font Awesome 5 Free" />
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry
+                                    FontSize="Medium"
+                                    HorizontalOptions="FillAndExpand"
+                                    Placeholder="Email"
+                                    TextColor="Black"
+                                    VerticalOptions="FillAndExpand" />
+                            </StackLayout>
+                            <StackLayout
+                                Margin="0,0,0,20"
+                                HeightRequest="40"
+                                Orientation="Horizontal">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="Large"
+                                    Text="&#xf13e;"
+                                    TextColor="#1ED6BA"
+                                    VerticalOptions="Center">
+                                    <Label.FontFamily>
+                                        <OnPlatform
+                                            x:TypeArguments="x:String"
+                                            Android="FontAwesome/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid"
+                                            iOS="Font Awesome 5 Free" />
+                                    </Label.FontFamily>
+                                </Label>
+                                <Entry
+                                    FontSize="Medium"
+                                    HorizontalOptions="FillAndExpand"
+                                    Placeholder="Password"
+                                    TextColor="Black"
+                                    VerticalOptions="FillAndExpand" />
+                            </StackLayout>
+                            <StackLayout Margin="0,0,0,5">
+                                <Button
+                                    Margin="10,0"
+                                    BackgroundColor="#1ED6BA"
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"
+                                    Text="LOG IN"
+                                    TextColor="White"
+                                    VerticalOptions="FillAndExpand" />
+                                
+                                <Label Text="Forget password?" HorizontalOptions="Center" TextColor="#1ED6BA" Margin="0,5,0,0" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        CornerRadius="60"
+                        HeightRequest="80"
+                        OutlineColor="#1ED6BA"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=-60}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Height,
+                                                                          Factor=0,
+                                                                          Constant=-70}"
+                        WidthRequest="80">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="70"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="&#xf2f6;"
+                            TextColor="#1ED6BA"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.FontFamily>
+                                <OnPlatform
+                                    x:TypeArguments="x:String"
+                                    Android="FontAwesome/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid"
+                                    iOS="Font Awesome 5 Free" />
+                            </Label.FontFamily>
+                        </Label>
+                    </Frame>
+                </RelativeLayout>
+
+            </StackLayout>
+            <StackLayout
+                HeightRequest="80"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Create new account?"
+                    TextColor="#1ED6BA"
+                    VerticalOptions="Start" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
